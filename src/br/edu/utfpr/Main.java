@@ -14,6 +14,11 @@ Criar programa orientado à objetos para solucionar os seguintes casos de uso:
 public class Main {
 
     public static void main(String[] args) {
-	// write your code here
+	    System.out.println("Sistema básico para locação");
+        System.out.println("Escolha a opção desejada:");
+        System.out.println("1 - Locar um livro");
+        System.out.println("2 - Consultar locação");
+        System.out.println("3 - Consultar locação por entidade");
+        System.out.println("4 - Sair");
     }
 }
