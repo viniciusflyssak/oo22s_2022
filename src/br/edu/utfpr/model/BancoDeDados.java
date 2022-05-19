@@ -16,11 +16,11 @@ public class BancoDeDados {
             new Livro(10, "Atumalaca e suas aventuras risonhas", 2008, "cRaZy FrOg", 8)
     );
     public List<Pessoa> Pessoas = List.of(
-            new Pessoa("Jonas", 18, null),
-            new Pessoa("Julia", 22, null),
-            new Pessoa("Peter", 25, null),
-            new Pessoa("Simone", 32, null),
-            new Pessoa("Jeribaldo", 40, null),
-            new Pessoa("Fausto Salvo", 89, null)
+            new Pessoa(1,"Jonas", 18, null),
+            new Pessoa(2,"Julia", 22, null),
+            new Pessoa(3,"Peter", 25, null),
+            new Pessoa(4,"Simone", 32, null),
+            new Pessoa(5,"Jeribaldo", 40, null),
+            new Pessoa(6,"Fausto Salvo", 89, null)
     );
 }
