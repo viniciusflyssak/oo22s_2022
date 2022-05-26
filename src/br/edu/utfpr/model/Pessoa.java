@@ -1,9 +1,14 @@
 package br.edu.utfpr.model;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Pessoa {
     private  int codigoPessoa;
+    private String nome;
+    private int idade;
+    private ArrayList<LivroLocacao> codigoLivrosLocados;
+
 
     public int getCodigoPessoa() {
         return codigoPessoa;
@@ -13,17 +18,9 @@ public class Pessoa {
         this.codigoPessoa = codigoPessoa;
     }
 
-    public List<LivroLocacao> getCodigoLivrosLocados() {
+    public ArrayList<LivroLocacao> getCodigoLivrosLocados() {
         return codigoLivrosLocados;
     }
-
-    public void setCodigoLivrosLocados(List<LivroLocacao> codigoLivrosLocados) {
-        this.codigoLivrosLocados = codigoLivrosLocados;
-    }
-
-    private String nome;
-    private int idade;
-    private List<LivroLocacao> codigoLivrosLocados;
 
     public void addCodigoLivrosLocados(LivroLocacao livroLocar) {
         this.codigoLivrosLocados.add(livroLocar);
@@ -45,10 +42,10 @@ public class Pessoa {
         this.idade = idade;
     }
 
-    public Pessoa(int codigoPessoa, String nome, int idade, List<LivroLocacao> codigoLivrosLocados) {
+    public Pessoa(int codigoPessoa, String nome, int idade) {
         this.codigoPessoa = codigoPessoa;
         this.nome = nome;
         this.idade = idade;
-        this.codigoLivrosLocados = codigoLivrosLocados;
+        this.codigoLivrosLocados = new ArrayList<>();
     }
 }

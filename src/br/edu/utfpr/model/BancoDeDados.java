@@ -3,7 +3,7 @@ package br.edu.utfpr.model;
 import java.util.List;
 
 public class BancoDeDados {
-    public List<Livro> Livros = List.of(
+    public static List<Livro> Livros = List.of(
             new Livro(1, "Pica-Pau aventuras mortais", 1992, "Jonas", 10),
             new Livro(2, "Hora de aventura: o livro", 2012, "W.", 5),
             new Livro(3, "Regular Show", 2013, "J.G. Quintel", 6),
@@ -15,12 +15,12 @@ public class BancoDeDados {
             new Livro(9, "Como matar seu professor de química", 2013, "Jessy", 6),
             new Livro(10, "Atumalaca e suas aventuras risonhas", 2008, "cRaZy FrOg", 8)
     );
-    public List<Pessoa> Pessoas = List.of(
-            new Pessoa(1,"Jonas", 18, null),
-            new Pessoa(2,"Julia", 22, null),
-            new Pessoa(3,"Peter", 25, null),
-            new Pessoa(4,"Simone", 32, null),
-            new Pessoa(5,"Jeribaldo", 40, null),
-            new Pessoa(6,"Fausto Salvo", 89, null)
+    public static List<Pessoa> Pessoas = List.of(
+            new Pessoa(1,"Jonas", 18),
+            new Pessoa(2,"Julia", 22),
+            new Pessoa(3,"Peter", 25),
+            new Pessoa(4,"Simone", 32),
+            new Pessoa(5,"Jeribaldo", 40),
+            new Pessoa(6,"Fausto Salvo", 89)
     );
 }

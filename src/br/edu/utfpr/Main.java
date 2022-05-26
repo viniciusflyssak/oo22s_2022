@@ -22,7 +22,6 @@ public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         LocacaoService locacaoService = new LocacaoService();
-        BancoDeDados bancoDeDados = new BancoDeDados();
         int opcao = -1;
         while (opcao != 4){
             System.out.println("Sistema básico para locação");
