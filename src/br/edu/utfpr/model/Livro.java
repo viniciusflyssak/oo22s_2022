@@ -8,6 +8,7 @@ public class Livro {
     private int ano;
     private String nomeAutor;
     private int qtdeDisponivel;
+    private int qtdeReservada;
 
     public int getCodigoLivro() {
         return codigoLivro;

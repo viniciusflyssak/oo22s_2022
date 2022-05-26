@@ -1,9 +1,10 @@
 package br.edu.utfpr.model;
 
-import java.util.Date;
+import java.time.LocalDate;
 
 public class LivroLocacao {
     private int codigoLivro;
+    private LocalDate dataLocacao;
 
     public int getCodigoLivro() {
         return codigoLivro;
@@ -13,18 +14,16 @@ public class LivroLocacao {
         this.codigoLivro = codigoLivro;
     }
 
-    public Date getDataLocacao() {
+    public LocalDate getDataLocacao() {
         return dataLocacao;
     }
 
-    public void setDataLocacao(Date dataLocacao) {
+    public void setDataLocacao(LocalDate dataLocacao) {
         this.dataLocacao = dataLocacao;
     }
 
-    public LivroLocacao(int codigoLivro, Date dataLocacao) {
+    public LivroLocacao(int codigoLivro, LocalDate dataLocacao) {
         this.codigoLivro = codigoLivro;
         this.dataLocacao = dataLocacao;
     }
-
-    private Date dataLocacao;
 }

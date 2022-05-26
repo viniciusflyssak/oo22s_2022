@@ -27,9 +27,10 @@ public class Main {
             System.out.println("Sistema básico para locação");
             System.out.println("Escolha a opção desejada:");
             System.out.println("1 - Locar um livro");
-            System.out.println("2 - Consultar locação");
-            System.out.println("3 - Consultar locação por entidade");
-            System.out.println("4 - Sair");
+            System.out.println("2 - Reservar um livro");
+            System.out.println("3 - Consultar locação por livro");
+            System.out.println("4 - Consultar locação por entidade");
+            System.out.println("5 - Sair");
             opcao = scanner.nextInt();
             switch (opcao) {
                 case 1:
@@ -37,12 +38,18 @@ public class Main {
                     locacaoService.locarLivro(scanner);
                     break;
                 case 2:
-                    //consultar locacao
+                    //reservar um livro
+                    locacaoService.reservarLivro(scanner);
                     break;
                 case 3:
-                    //consultar locacao entidade
+                    //consultar locacao livro
+                    locacaoService.consultarLocacoesLivro(scanner);
                     break;
                 case 4:
+                    //consultar locacao entidade
+                    locacaoService.consultarLocacoesEntidade(scanner);
+                    break;
+                case 5:
                     //sair
                     break;
                 default:
