@@ -1,7 +1,12 @@
 package br.edu.utfpr.model;
 
+import java.time.Duration;
+import java.time.LocalDate;
+import java.time.Period;
 import java.util.ArrayList;
 import java.util.List;
+
+import static java.time.LocalDate.*;
 
 public class Pessoa {
     private  int codigoPessoa;
@@ -24,6 +29,27 @@ public class Pessoa {
 
     public void addCodigoLivrosLocados(LivroLocacao livroLocar) {
         this.codigoLivrosLocados.add(livroLocar);
+    }
+
+    public void removeCodigoLivrosLocados(int codLivro) {
+        for (int i = 0; i < this.codigoLivrosLocados.size(); i++){
+            if (codLivro  == this.codigoLivrosLocados.get(i).getCodigoLivro()){
+                Duration diasPassados = Duration.between(this.codigoLivrosLocados.get(i).getDataLocacao().atStartOfDay(), LocalDate.now().atStartOfDay());
+                if (diasPassados.toDays() >= 30) {
+                    System.out.println("A data de entrega está vencida! terá de pagar multa!");
+                    double multa = 0;
+                    for(int j = 0; j < (diasPassados.toDays() - 30); j++){
+                        if (multa < 20){
+                            multa = multa + 0.5;
+                        }else{
+                            multa = multa + 1;
+                        }
+                    }
+                    System.out.println("O valor da multa é: " + multa);
+                }
+                this.codigoLivrosLocados.remove(i);
+            }
+        }
     }
 
     public String getNome() {

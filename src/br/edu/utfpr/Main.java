@@ -3,6 +3,7 @@ package br.edu.utfpr;
 import br.edu.utfpr.model.BancoDeDados;
 import br.edu.utfpr.model.LocacaoService;
 
+import java.io.IOException;
 import java.util.Scanner;
 
 /*
@@ -19,18 +20,19 @@ Criar programa orientado à objetos para solucionar os seguintes casos de uso:
  */
 public class Main {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
         Scanner scanner = new Scanner(System.in);
         LocacaoService locacaoService = new LocacaoService();
         int opcao = -1;
-        while (opcao != 4){
+        while (opcao != 6){
             System.out.println("Sistema básico para locação");
             System.out.println("Escolha a opção desejada:");
             System.out.println("1 - Locar um livro");
             System.out.println("2 - Reservar um livro");
-            System.out.println("3 - Consultar locação por livro");
+            System.out.println("3 - Consultar disponibilidade livro");
             System.out.println("4 - Consultar locação por entidade");
-            System.out.println("5 - Sair");
+            System.out.println("5 - Devolver livro");
+            System.out.println("6 - Sair");
             opcao = scanner.nextInt();
             switch (opcao) {
                 case 1:
@@ -42,14 +44,19 @@ public class Main {
                     locacaoService.reservarLivro(scanner);
                     break;
                 case 3:
-                    //consultar locacao livro
-                    locacaoService.consultarLocacoesLivro(scanner);
+                    //consultar Disponibilidade livro
+                    locacaoService.consultarDisponibilidadeLivro(scanner);
                     break;
                 case 4:
                     //consultar locacao entidade
                     locacaoService.consultarLocacoesEntidade(scanner);
                     break;
                 case 5:
+                    //devolução livro
+                    locacaoService.devolverLivro(scanner);
+                    break;
+                case 6:
+                    System.out.println("Encerrando...");
                     //sair
                     break;
                 default:

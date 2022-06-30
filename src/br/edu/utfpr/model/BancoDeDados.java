@@ -12,7 +12,7 @@ public class BancoDeDados {
             new Livro(6, "Imortalidade: uma aventura sobre a vida", 1998, "Ellie", 3),
             new Livro(7, "Como coordenar uma rede de restaurantes de sucesso", 2008, "Gus", 1),
             new Livro(8, "Como produzir substâncias altamente lucrativas", 2011, "Mr. white", 2),
-            new Livro(9, "Como matar seu professor de química", 2013, "Jessy", 6),
+            new Livro(9, "Como lucrar com seu professor de química", 2013, "Jessy", 6),
             new Livro(10, "Atumalaca e suas aventuras risonhas", 2008, "cRaZy FrOg", 8)
     );
     public static List<Pessoa> Pessoas = List.of(
