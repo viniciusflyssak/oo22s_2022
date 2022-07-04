@@ -50,14 +50,6 @@ public class Pessoa extends Identificador{ //herança
         }
     }
 
-    public String getNome() {
-        return getNome();
-    }
-
-    public void setNome(String nome) {
-        this.setNome(nome);
-    }
-
     public int getIdade() {
         return idade;
     }

@@ -16,14 +16,6 @@ public class Livro extends Identificador { //herança
         this.setCodigo(codigoLivro);
     }
 
-    public String getNome() {
-        return getNome();
-    }
-
-    public void setNome(String nome) {
-        this.setNome(nome);
-    }
-
     public int getAno() {
         return ano;
     }
