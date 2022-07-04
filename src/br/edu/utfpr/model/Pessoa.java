@@ -8,8 +8,7 @@ import java.util.List;
 
 import static java.time.LocalDate.*;
 
-public class Pessoa extends Identificador{
-    private String nome;
+public class Pessoa extends Identificador{ //herança
     private int idade;
     private ArrayList<LivroLocacao> codigoLivrosLocados;
 
@@ -52,11 +51,11 @@ public class Pessoa extends Identificador{
     }
 
     public String getNome() {
-        return nome;
+        return getNome();
     }
 
     public void setNome(String nome) {
-        this.nome = nome;
+        this.setNome(nome);
     }
 
     public int getIdade() {
@@ -68,8 +67,7 @@ public class Pessoa extends Identificador{
     }
 
     public Pessoa(int codigoPessoa, String nome, int idade) {
-        super(codigoPessoa);
-        this.nome = nome;
+        super(codigoPessoa, nome);
         this.idade = idade;
         this.codigoLivrosLocados = new ArrayList<>();
     }

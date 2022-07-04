@@ -2,7 +2,7 @@ package br.edu.utfpr.model;
 
 import java.time.LocalDate;
 
-public class LivroLocacao extends Identificador{
+public class LivroLocacao extends Identificador{ //herança
     private LocalDate dataLocacao;
 
     public int getCodigoLivro() {

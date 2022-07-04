@@ -2,8 +2,7 @@ package br.edu.utfpr.model;
 
 import java.util.Date;
 
-public class Livro extends Identificador {
-    private String nome;
+public class Livro extends Identificador { //herança
     private int ano;
     private String nomeAutor;
     private int qtdeDisponivel;
@@ -18,11 +17,11 @@ public class Livro extends Identificador {
     }
 
     public String getNome() {
-        return nome;
+        return getNome();
     }
 
     public void setNome(String nome) {
-        this.nome = nome;
+        this.setNome(nome);
     }
 
     public int getAno() {
@@ -50,8 +49,7 @@ public class Livro extends Identificador {
     }
 
     public Livro(int codigoLivro, String nome, int ano, String nomeAutor, int qtdeDisponivel) {
-        super(codigoLivro);
-        this.nome = nome;
+        super(codigoLivro, nome);
         this.ano = ano;
         this.nomeAutor = nomeAutor;
         this.qtdeDisponivel = qtdeDisponivel;
