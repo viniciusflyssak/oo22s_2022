@@ -2,16 +2,15 @@ package br.edu.utfpr.model;
 
 import java.time.LocalDate;
 
-public class LivroLocacao {
-    private int codigoLivro;
+public class LivroLocacao extends Identificador{
     private LocalDate dataLocacao;
 
     public int getCodigoLivro() {
-        return codigoLivro;
+        return getCodigo();
     }
 
     public void setCodigoLivro(int codigoLivro) {
-        this.codigoLivro = codigoLivro;
+        this.setCodigo(codigoLivro);
     }
 
     public LocalDate getDataLocacao() {
@@ -23,7 +22,8 @@ public class LivroLocacao {
     }
 
     public LivroLocacao(int codigoLivro, LocalDate dataLocacao) {
-        this.codigoLivro = codigoLivro;
+        super(codigoLivro);
+        this.setCodigoLivro(codigoLivro);
         this.dataLocacao = dataLocacao;
     }
 }

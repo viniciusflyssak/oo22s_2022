@@ -8,19 +8,18 @@ import java.util.List;
 
 import static java.time.LocalDate.*;
 
-public class Pessoa {
-    private  int codigoPessoa;
+public class Pessoa extends Identificador{
     private String nome;
     private int idade;
     private ArrayList<LivroLocacao> codigoLivrosLocados;
 
 
     public int getCodigoPessoa() {
-        return codigoPessoa;
+        return getCodigo();
     }
 
     public void setCodigoPessoa(int codigoPessoa) {
-        this.codigoPessoa = codigoPessoa;
+        this.setCodigo(codigoPessoa);
     }
 
     public ArrayList<LivroLocacao> getCodigoLivrosLocados() {
@@ -69,7 +68,7 @@ public class Pessoa {
     }
 
     public Pessoa(int codigoPessoa, String nome, int idade) {
-        this.codigoPessoa = codigoPessoa;
+        super(codigoPessoa);
         this.nome = nome;
         this.idade = idade;
         this.codigoLivrosLocados = new ArrayList<>();
