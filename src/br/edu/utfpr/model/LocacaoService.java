@@ -31,7 +31,7 @@ public class LocacaoService {
         System.out.println("Digite o código do livro a ser reservado: ");
         int idLivro = scanner.nextInt();
         System.out.println("Livro selecionado: " + BancoDeDados.Livros.stream().filter(livro1 -> livro1.getCodigoLivro() == idLivro).findFirst().orElse(null).getNome() +
-                ", quantidade disponível" + BancoDeDados.Livros.stream().filter(livro1 -> livro1.getCodigoLivro() == idLivro).findFirst().orElse(null).getQtdeDisponivel());
+                ", quantidade disponível " + BancoDeDados.Livros.stream().filter(livro1 -> livro1.getCodigoLivro() == idLivro).findFirst().orElse(null).getQtdeDisponivel());
         System.out.println("Digite a data da reserva (ano-mês-dia): ");
         LocalDate dataReserva = LocalDate.parse(scanner.next(), DateTimeFormatter.ISO_LOCAL_DATE);
         LivroLocacao livroLocacao = new LivroLocacao(BancoDeDados.Livros.stream().filter(livro1 -> livro1.getCodigoLivro() == idLivro).findFirst().orElse(null).getCodigoLivro(), dataReserva);
